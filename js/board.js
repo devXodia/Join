@@ -45,9 +45,14 @@ async function createBoardCard(id) {
     let idContainerAssignements = `board_icons_username${id}`;
 
     renderBoardCard(categoryCard, titleCard, descriptionCard, id, prioCard, cats, categoryColorCode);
+    let parentProgressbar = document.getElementById(`progressParent${id}`);
     if (subtaskCard.length > 0) {
         createProgressbar(subtaskCard, id)
+        parentProgressbar.style = "width: 120px; background-color: lightgray; border-radius: 8px;"
     };
+    if (subtaskCard.length <= 0){
+        parentProgressbar.style.display = "none";
+    }
     createAssignmentIcons(assignedCard, idContainerAssignements);
 }
 
@@ -86,7 +91,9 @@ function renderBoardCard(categoryCard, titleCard, descriptionCard, ID, prioCard,
                     <div class="board_task_container_description">${descriptionCard}</div>
                 </div>
                 <div class="board_task_progress">
+                    <div id="progressParent${ID}">
                     <div class="board_task_progressbar" id="progressbar${ID}"></div>
+                    </div>
                     <div class="board_task_progress_text" id="progressbarText${ID}"></div>
                 </div>
                 <div class="board_task_assignments">
@@ -168,6 +175,7 @@ function createProgressbar(subtaskCard, id) {
     let done = countDoneSubtasks(subtaskCard);
     let percentDoneTasks = done / tasksNumber;
     let filledprogressbar = 138 * percentDoneTasks;
+    
 
     renderProgressBar(filledprogressbar, id);
     renderProgressText(done, tasksNumber, id);
@@ -192,8 +200,12 @@ function countDoneSubtasks(subtaskCard) {
  * @param {*} id index of the task
  */
 function renderProgressBar(filledprogressbar, id) {
+    let parent = document.getElementById('progressParent');
     let progresID = "progressbar" + id;
-    document.getElementById(progresID).style = `width: ${filledprogressbar}px`;
+    let progressBar = document.getElementById(progresID);
+    progressBar.style = `width: ${filledprogressbar}px; border-radius: 8px;`
+  
+    
 }
 
 
