@@ -35,14 +35,25 @@ async function deleteContact(contactNameToDelete) {
 function askBeforeDeleteCategory(categoryToDelete, i) {
   let confirmDeleteCategory = document.getElementById('confirmDeleteCategory');
   confirmDeleteCategory.classList.remove('d-none');
-  confirmDeleteCategory.innerHTML += /*html*/`
-      <div id="confirmDeleteCategoryQuestion">Delete Category?</div>
-      <div id="confirmDeleteCategoryAnswers">
-              <div id="confirmDeleteCategoryAnswersYes" onclick="deleteCategory('${categoryToDelete}', ${i})">Delete</div>
-              <div id="confirmDeleteCategoryAnswersNo" onclick="closeDeleteCategoryRequest()">Back</div>
-      </div>
-  `
+  confirmDeleteCategory.innerHTML += beforeDeleteTemplate(categoryToDelete, i);
 }
+
+/**
+ * This function is used to hold a html template 
+ * @param {string} categoryToDelete - this category has been selected to be deleted
+ * @param {number} i - index of the JSON categories
+ * @returns html template
+ */
+function beforeDeleteTemplate(categoryToDelete, i){
+  return /*html*/`
+  <div id="confirmDeleteCategoryQuestion">Delete Category?</div>
+  <div id="confirmDeleteCategoryAnswers">
+          <div id="confirmDeleteCategoryAnswersYes" onclick="deleteCategory('${categoryToDelete}', ${i})">Delete</div>
+          <div id="confirmDeleteCategoryAnswersNo" onclick="closeDeleteCategoryRequest()">Back</div>
+  </div>
+`
+}
+
 
 /**
  * this function deletes a category if it's not in use in the board

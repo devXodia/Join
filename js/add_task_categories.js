@@ -248,7 +248,9 @@ function checkIfNewCategoryReady() {
   }
 }
 
-
+/**
+ * this function asks the user to choose a color before saving
+ */
 function alertNewColor() {
   document.getElementById('categoryAlert').innerHTML ='Please choose a color before saving';
 }

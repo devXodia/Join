@@ -193,15 +193,13 @@ async function createNameGreating(){
  */
 function fadeGreeting(){
     if (window.innerWidth < 1200) {
-        // Warte 2 Sekunden, bevor das Ausblenden beginnt
         setTimeout(function() {
-            // Restlicher Code für die Animation, wie zuvor
-            var container = document.getElementById("summary_container_bottom_right");
-            var fadeDuration = 1000;
-            var fadeInterval = 10;
-            var opacity = 1;
-            var deltaOpacity = 1 / (fadeDuration / fadeInterval);
-            var fadeOut = setInterval(function() {
+            let container = document.getElementById("summary_container_bottom_right");
+            let fadeDuration = 1000;
+            let fadeInterval = 10;
+            let opacity = 1;
+            let deltaOpacity = 1 / (fadeDuration / fadeInterval);
+            let fadeOut = setInterval(function() {
                 opacity -= deltaOpacity;
                 container.style.opacity = opacity;
                 if (opacity <= 0) {
@@ -213,7 +211,9 @@ function fadeGreeting(){
     }
 }
 
-
+/**
+ * This function redirects the user to the board Page
+ */
 function openBoard(){
     window.location.href = "board.html";
 }
