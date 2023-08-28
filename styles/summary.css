@@ -463,7 +463,7 @@ body {
 
     #summary_container_bottom{
         padding-bottom: 90px;
-        width: calc(100% - 16px);
+        width: unset;
         justify-content: center;
         align-items: center;
     }
@@ -481,8 +481,12 @@ body {
     }
 
     .summary_bottom_stats_container{
-        width: 30%;
+        width: 26vw;
         height: 130px;
+    }
+
+    #tasks_in_Board_text{
+        text-align: center;
     }
 
 

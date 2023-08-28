@@ -55,6 +55,7 @@
   }
   .addTaskContainerSides {
     height: fit-content;
+    width: 90%;
   }
 }
 
