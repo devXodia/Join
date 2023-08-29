@@ -127,7 +127,7 @@ function templateNewContact() {
   let templateNewContact = /*html*/`
   <div class="option contactList">
     <div id="newContactAdd">Invite new contact</div>
-    <div class="newContact roundedBorder"><img src="assets/img/Icon_Contacts_white.png" onclick="inviteContact()"></div>
+    <div class="newContact roundedBorder"><img src="assets/img/Icon_Contacts_white.png" onclick="inviteContact();"></div>
   </div>`;
   return templateNewContact;
 }
