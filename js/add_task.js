@@ -125,9 +125,9 @@ function templateContactsOptions(contact, i, mode) {
  */
 function templateNewContact() {
   let templateNewContact = /*html*/`
-  <div class="option contactList">
+  <div class="option contactList" onclick="inviteContact();">
     <div id="newContactAdd">Invite new contact</div>
-    <div class="newContact roundedBorder"><img src="assets/img/Icon_Contacts_white.png" onclick="inviteContact();"></div>
+    <div class="newContact"><img src="assets/img/Icon_Contacts_white.png" onclick="inviteContact();"></div>
   </div>`;
   return templateNewContact;
 }

@@ -336,6 +336,10 @@ textarea:focus-visible {
   justify-content: center;
 }
 
+#newContactAdd{
+  flex: 1;
+}
+
 .newContact img {
   filter: brightness(1) invert(1);
 }
