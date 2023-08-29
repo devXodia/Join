@@ -65,7 +65,7 @@ async function loadItems() {
 function renderContacts(idContactContainer, mode) {
   document.getElementById(idContactContainer).innerHTML = templateContactSelection(mode);
   for (let i = 0; i < contacts.length; i++) {
-    const contact = contacts[i]['user_name'];
+    const contact = contacts[i];
     document.getElementById(`contactsOptions${mode}`).innerHTML += templateContactsOptions(contact, i, mode);
   }
   document.getElementById(`contactsOptions${mode}`).innerHTML += templateNewContact();
@@ -87,6 +87,8 @@ function templateContactSelection(mode) {
 }
 
 
+
+
 /**
  * this function ensures the onlick-Funktion of closing the options isn't carried out
  * @param {event} - no parameter
@@ -106,9 +108,13 @@ function handleContactOptionsClick(event, mode) {
 function templateContactsOptions(contact, i, mode) {
   let templateContactsOptions = /*html*/`
   <div class="option contactList" onclick="handlecheckContactClick(event,${i},'${mode}')">
-    <div id="contact${mode}${i}">${contact}</div>
+    <div id="contact${mode}${i}" class="contactIconInList">
+    <div class="board_Icons_Username" style="background-color: ${contact.color}">${contact.acronym}</div>
+    ${contact.user_name}
+  </div>
     <div class="checkBox hover" id="contactCheckBox${mode}${i}"></div>
-  </div>`;
+  </div>
+  `;
   return templateContactsOptions;
 }
 
@@ -194,6 +200,11 @@ function updateAssignedContacts() {
       assignedContacts.push(contact);
     }
   }
+  document.getElementById('assignedContactIconsList').innerHTML = ""
+  assignedContacts.forEach( (contact) => {
+    document.getElementById('assignedContactIconsList').innerHTML += `<div class="board_Icons_Username" style="background-color: ${contact.color}">${contact.acronym}</div>
+  </div>`
+  })
 }
 
 

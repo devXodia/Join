@@ -17,6 +17,7 @@ function openTaskOverview(id, category) {
     renderTaskOverview(task, id);
     renderAssignementsInTaskOverview(task, "editTaskContainerAssignedNames");
     renderSubtasksInTaskOverview(id);
+    
 }
 
 /**
@@ -215,7 +216,6 @@ function closeEditTask() {
     enableBackgroundScroll();
     document.getElementById('editTask').classList.add('d-none');
     flushSubtasks();
-
 }
 
 
