@@ -288,7 +288,7 @@ async function saveEditedBoard(id) {
         let title = document.getElementById("editTaskTitleChangable").value;
         let description = document.getElementById("editTaskDescriptionChangable").value;
         let dueDate = document.getElementById("dueDateEdit").value;
-        let task = returnTaskJSON(description, title, dueDate);
+        let task = returnTaskEditJSON(description, title, dueDate);
         tasks[id] = task;
         await saveTask();
         closeEditTask();
@@ -297,7 +297,7 @@ async function saveEditedBoard(id) {
     }
 }
 
-function returnTaskJSON(description, title, dueDate){
+function returnTaskEditJSON(description, title, dueDate){
 return {
     'title': title,
     'description': description,
