@@ -41,29 +41,12 @@ function createTask(event) {
     let title = document.getElementById("title").value;
     let description = document.getElementById("description").value;
     let dueDate = document.getElementById("dueDateAdd").value;
-    let task = returnTaskJSON(title, description, dueDate);
+    let task = {title: title, description: description, category: assignedCategory, assignedContacts: assignedContacts, dueDate: dueDate, prio: assignedPrio, subtasks: subTasksArray, column: column};
     tasks.push(task);
     saveTask();
     popUpNotice();
     flushSubtasks();
   }
-}
-
-/**
- * This function returns the Task JSON
- * @returns JSON
- */
-function returnTaskJSON(title, description, dueDate){
-  return {
-    title: title,
-    description: description,
-    category: assignedCategory,
-    assignedContacts: assignedContacts,
-    dueDate: dueDate,
-    prio: assignedPrio,
-    subtasks: subTasksArray,
-    column: column,
-  };
 }
 
 
