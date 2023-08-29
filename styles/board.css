@@ -10,7 +10,7 @@ body{
 
 #board{
     font-family: 'Inter';
-    width: 100vw;
+    width: 98vw;
     background-color: #F6F7F8;
 }
 
@@ -382,10 +382,11 @@ input:focus{
     align-items: center;
 }
 
-
-
-
-
+@media(max-width: 1000px){
+    #board{
+        width: 98vw;
+    }
+}
 
 
 
