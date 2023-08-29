@@ -120,8 +120,8 @@ body {
 }
 
 #summary_bottom_stats_mid_left img {
-    width: 60px;
-    height: 60px;
+    width: 69px;
+    height: 69px;
 }
 
 #summary_bottom_stats_mid_left_container {
@@ -306,6 +306,11 @@ body {
 
 @media (max-width: 900px){
 
+    .imgBottomContainer{
+        width: 45px;
+        height: 45px;
+    }
+
     #summary{
         align-items: center;       
     }
@@ -331,7 +336,7 @@ body {
     }
 
     .summary_bottom_stats_bottom_container img{
-        height: 46px;
+        height: 20px;
         width: 46px;
     }
 

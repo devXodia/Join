@@ -11,6 +11,8 @@ html {
   position: relative;
 }
 
+
+
 .dropdown_for_mobile {
   display: none;
   position: absolute;
@@ -188,7 +190,7 @@ html {
 }
 
 .header {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
 }
 
@@ -425,7 +427,8 @@ html {
 }
 
 .avatar {
-  margin-right: 50px;
+    margin-right: 30px;
+
 }
 
 #create:hover {
@@ -650,6 +653,10 @@ input[type="number"] {
   align-items: center;
 }
 
+#close_2 {
+  fill: black;
+}
+
 @media (max-width: 1700px) {
   #contactList {
     left: 13.7%;
@@ -688,7 +695,7 @@ input[type="number"] {
   }
 
   #create_contact {
-    width: 92%;
+    width: 87%;
   }
 }
 
@@ -698,7 +705,7 @@ input[type="number"] {
   }
 
   #new_contact_modal{
-    left: 26%;
+    left: 18%;
     min-width: 68vw;
   }
 }
@@ -755,6 +762,14 @@ input[type="number"] {
 }
 
 @media (max-width: 900px) {
+  #close_2{
+    fill: white;
+  }
+
+  #create_contact{
+    width: 100%;
+  }
+
   #popupBar {
     z-index: 10;
   }
@@ -826,7 +841,7 @@ input[type="number"] {
 
   #edit_contact_modal {
     flex-direction: column;
-    top: 13vh;
+    top: 0;
     left: 0;
     box-shadow: unset;
     height: 80vh;
@@ -844,7 +859,7 @@ input[type="number"] {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-end-start-radius: 0px;
-    min-height: 33vh;
+    
   }
 
   .avatar {
@@ -852,7 +867,7 @@ input[type="number"] {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top: 27vh !important;
+    top: 40vh !important;
     margin-right: 0;
   }
 
@@ -888,15 +903,21 @@ input[type="number"] {
 
   #new_contact_modal {
     flex-direction: column;
-    top: 13vh;
+    
     left: 0;
     box-shadow: unset;
-    height: 80vh;
+    top: unset;
     width: 100vw;
   }
 
   .user_icon {
     font-size: 32px;
+  }
+
+  #edit_form{
+
+  width: 100%;
+  
   }
 
   @media (max-width: 600px) {
@@ -964,9 +985,7 @@ input[type="number"] {
   }
 
   @media (max-width: 400px) {
-    .right_side {
-      min-height: 45vh;
-    }
+    
 
     .avatar {
       top: 35vh;

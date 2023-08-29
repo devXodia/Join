@@ -37,8 +37,10 @@ async function init() {
  */
 function closeModal(id) {
   let modal = document.getElementById(id);
+  let parentElement = modal.parentNode;
   modal.classList.remove("slideIn");
   modal.classList.add("slideOut");
+  parentElement.style = "";
 }
 
 /**
@@ -50,8 +52,10 @@ function closeModal(id) {
  */
 function openModal(id) {
   let modal = document.getElementById(id);
+  let parentElement = modal.parentNode;
   modal.style = "display: flex;";
   modal.className = "slideIn";
+  parentElement.style = "position: absolute; display: flex; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 99;"
 }
 
 /**
@@ -253,8 +257,6 @@ function changeDisplay() {
   currentHighlightedDiv.classList.remove("highlighted");
 }
 
-
-
 /**
  *
  * This function puts a upper case on the first and last Name as the user types
@@ -265,13 +267,12 @@ function changeDisplay() {
 function capitalizeName(modal) {
   let nameOnInput = document.getElementById(modal).value;
   let arr = nameOnInput.split(" ");
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     let fullName = arr.join(" ");
     document.getElementById(modal).value = fullName;
   }
 }
-
 
 
 /**

@@ -53,7 +53,7 @@ function createTask(event) {
  * This function returns the Task JSON
  * @returns JSON
  */
-function returnTaskJSON(){
+function returnTaskJSON(title, description, dueDate){
   return {
     title: title,
     description: description,
