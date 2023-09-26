@@ -41,7 +41,17 @@ function renderTaskOverview(task, id) {
  * @param {*} id index of the task
  */
 function renderEditOverviewTemplate(colorCode, prio, id) {
-    document.getElementById('editTask').innerHTML = htmlEditOverview(id, colorCode, prio);
+    let task = document.getElementById('editTask');
+    
+    task.innerHTML = htmlEditOverview(id, colorCode, prio);
+    let container = document.getElementById('wrapper_for_close');
+    
+
+    window.onclick = function(event) {
+        if (event.target != container && event.target == task) {
+            closeEditTask();
+        }
+      }
     disableBackgroundScroll();
 }
 

@@ -78,9 +78,10 @@ function renderContacts(idContactContainer, mode) {
  */
 function templateContactSelection(mode) {
   let templateContactSelection = /*html*/`
-  <div class="inputWithList">
-    <input id="contactSelection${mode}" class="selection" required disabled placeholder="Select contacts to assign">
-    <img src="assets/img/dropdown.svg" class="hover" onclick="handleContactOptionsClick(event,'${mode}')"/>
+  <div class="inputWithList" onclick="handleContactOptionsClick(event,'${mode}')">
+  <div style="position:absolute; width: 100%; height: 100%" onclick="handleContactOptionsClick(event,'${mode}')"></div>
+    <input onclick="handleContactOptionsClick(event,'${mode}')" id="contactSelection${mode}" class="selection" required disabled placeholder="Select contacts to assign">
+    <img src="assets/img/dropdown.svg" class="hover" />
   </div>
   <div class="hidden roundedBorder" id="contactsOptions${mode}"></div>`;
   return templateContactSelection;

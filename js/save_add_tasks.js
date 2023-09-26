@@ -10,19 +10,21 @@
 function clearTask() {
   document.getElementById("title").value = "";
   document.getElementById("description").value = "";
-  document.getElementById("categoryOptions").innerHTML = "";
+  document.getElementById("categorySelection").value = "";
+  document.getElementById('categorySelectionCircle').innerHTML = "";
   document.getElementById("categoryAlert").innerHTML = "";
   document.getElementById("contactAlert").innerHTML = "";
   document.getElementById(`prioAlertAdd`).innerHTML = "";
   document.getElementById("dueDateAdd").value = "";
   document.getElementById("inputSubtaskAdd").value = "";
-  document.getElementById("subTasks").innerHTML = "";
+  document.getElementById("subTasksAdd").innerHTML = "";
   document.getElementById("urgentAdd").classList.remove("urgent");
   document.getElementById("mediumAdd").classList.remove("medium");
   document.getElementById("lowAdd").classList.remove("low");
   document.getElementById("popupNotice").classList.remove("visible");
+  document.getElementById('assignedContactIconsList').innerHTML = '';
   renderCategories();
-  renderContacts();
+  renderContacts('contactContainer', 'Add');
   renderPrio();
   assignedPrio = "";
   subTasksArray = [];

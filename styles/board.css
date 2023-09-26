@@ -132,7 +132,7 @@ input:focus{
 }
 
 #board_container_bottom{    
-    margin-top: 67px;
+    margin-top: 32px;
     margin-left:297px; 
     height: 661px;
     display: flex;

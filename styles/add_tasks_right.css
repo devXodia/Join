@@ -34,6 +34,7 @@
   align-items: center;
   justify-content: space-around;
   background-color: white;
+  position: relative;
 }
 
 .prio:hover {
@@ -74,6 +75,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .inputSubtask {
@@ -81,6 +83,7 @@
   border-radius: 10px;
   padding: 13px 21px 13px 21px;
   flex-grow: 2;
+  position: relative;
 }
 
 .inputSubtask:focus-visible {
@@ -156,6 +159,7 @@
   padding: 18px 15px;
   font-size: 20px;
   gap: 10px;
+  position: relative;
 }
 
 .clear img {

@@ -2,7 +2,9 @@ function htmlEditOverview(id, colorCode, prio){
     return /*html*/`
     <div id="confirmDeleteTask" class="d-none">
     </div>
+    
     <div id="editTaskContainer" >
+    <div  id="wrapper_for_close" style="position: absolute; width: 100%; height: 100%;"></div>
         <div id="editTaskContainerClose" onclick="saveBoard(${id})"><img src="/assets/img/Icon_close.png" alt="">
         </div>
         <div id="editTaskContainerEditDelete">
@@ -10,6 +12,7 @@ function htmlEditOverview(id, colorCode, prio){
             <div id="editTaskContainerEdit" onclick="openEditMode(${id})"><img src="/assets/img/Icon_edit.png"></div>
         </div>
         <div id="editTaskContainerInner">
+            
             <div id="editTaskContainerCategory" style="background-color: ${colorCode}"></div>
             <div id="editTaskContainerTitle"></div>
             <div id="editTaskContainerDescription"></div>
@@ -30,7 +33,9 @@ function htmlEditOverview(id, colorCode, prio){
             <div id=editTaskContainerSubtasksTasks></div>
             </div>
         </div>
+    
     </div>
+</div>
 `;
 }
 

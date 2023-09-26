@@ -54,11 +54,11 @@ async function createBoardCard(id) {
  */
 function checkIfProgressBarNeeded(subtaskCard, id){
     let parentProgressbar = document.getElementById(`progressParent${id}`);
-    if (subtaskCard.length > 0) {
+    if (subtaskCard.length > 0 && parentProgressbar != null) {
         createProgressbar(subtaskCard, id)
         parentProgressbar.style = "width: 120px; background-color: lightgray; border-radius: 8px;"
     };
-    if (subtaskCard.length <= 0){
+    if (subtaskCard.length <= 0 && parentProgressbar != null){
         parentProgressbar.style.display = "none";
     }
 }
@@ -87,11 +87,14 @@ function determineColorCategory(category) {
  * @param {*} attributes passes attributes of the task to create the template of this taskCard
  */
 function renderBoardCard(categoryCard, titleCard, descriptionCard, ID, prioCard, cats, categoryColorCode) {
-    let board_todo = document.getElementById(`${cats}`);
-    board_todo.innerHTML += boardToDoTemplate(categoryCard, categoryColorCode, titleCard, descriptionCard, ID, prioCard);
-    if(isMobileDevice()){
-    renderMoveBtns(cats, ID);
+    if(cats != null){
+        let board_todo = document.getElementById(`${cats}`);
+        board_todo.innerHTML += boardToDoTemplate(categoryCard, categoryColorCode, titleCard, descriptionCard, ID, prioCard);
+        if(isMobileDevice()){
+        renderMoveBtns(cats, ID);
+        }
     }
+   
 }
 
 
@@ -243,6 +246,7 @@ function renderAssignmentIcons(assignedUser, contact, idContainer) {
         newCircle.title = assignedUser;
 
         let username = document.getElementById(idContainer);
+        if(username != null)
         username.appendChild(newCircle);
     }
 }

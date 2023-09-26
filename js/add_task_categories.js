@@ -27,14 +27,14 @@ function renderCategories() {
 //excluded: onkeydown ="pickExistingCategory(event)"
 function templateCategory() {
   let templateCategory = /*html*/ `
-    <div class="inputWithList">
+    <div class="inputWithList" onclick="handleCategoriesOptionsClick(event)">
       <div class="inputCategory">
         <input id="categorySelection" class="selection" required placeholder="Select task category" >
         <div id="categorySelectionCircle"></div> 
       </div>
     <div id="categorySelectionLeft"></div>
     <div id="dividerSmall"></div>
-    <div id="categorySelectionRight" onclick="handleCategoriesOptionsClick(event)">
+    <div id="categorySelectionRight" >
       <img src="assets/img/dropdown.svg" class="hover" />
    </div>
   </div>
@@ -86,8 +86,8 @@ function templateCategoryOptionsFirst(category, i) {
  */
 function templateCategoryOptionsFurther(category, i, colorCode) {
   let templateCategoryOptionsFurther = /*html*/ `
-    <div class="option">
-      <div id="category${i}" class="categoryLine" onclick="selectCategory(${i})">
+    <div class="option" onclick="selectCategory(${i})">
+      <div id="category${i}" class="categoryLine" >
         <div>${category}</div>
         <div class="circle" style="background-color: ${colorCode}"></div>
       </div>
