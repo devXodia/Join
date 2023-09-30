@@ -119,8 +119,8 @@
 
 .checkBox {
   border: solid black 2px;
-  height: 16px;
-  width: 16px;
+  min-height: 16px;
+  min-width: 16px;
   border-radius: 3px;
   overflow: visible;
   display: flex;
@@ -210,11 +210,10 @@
   animation: slideInBottom 0.5s forwards;
 }
 
-.holdingIconsList{
+.holdingIconsList {
   margin-left: 10px;
   display: flex;
 }
-
 
 ::-webkit-scrollbar {
   width: 15px;
