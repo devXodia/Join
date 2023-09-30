@@ -171,7 +171,7 @@ function renderSubtasksWithHook(index, id) {
   ).innerHTML += /*html*/ `
             <div class="subtaskInOverview">
                 <div id="checkBoxEdit${id}${index}" class="checkBox hover" onclick="addCheck(${index},${id},'Edit')"><img src="assets/img/done-30.png"></div>
-                <div>${subTasksArray[index].subTaskName}</div>
+                <div style="flex:1;">${subTasksArray[index].subTaskName}</div>
             </div>
         `;
 }
