@@ -11,8 +11,6 @@ html {
   position: relative;
 }
 
-
-
 .dropdown_for_mobile {
   display: none;
   position: absolute;
@@ -427,8 +425,7 @@ html {
 }
 
 .avatar {
-    margin-right: 30px;
-
+  margin-right: 30px;
 }
 
 #create:hover {
@@ -704,7 +701,7 @@ input[type="number"] {
     left: 19.5%;
   }
 
-  #new_contact_modal{
+  #new_contact_modal {
     left: 18%;
     min-width: 68vw;
   }
@@ -733,7 +730,7 @@ input[type="number"] {
   #contactList {
     left: 22.2%;
   }
-  #new_contact_modal{
+  #new_contact_modal {
     left: 25%;
     min-width: 50vw;
   }
@@ -743,13 +740,12 @@ input[type="number"] {
     left: 23.2%;
   }
 
-  #new_contact_modal{
+  #new_contact_modal {
     z-index: 17;
     left: 14%;
-
   }
 
-  #edit_contact_modal{
+  #edit_contact_modal {
     z-index: 11;
   }
 }
@@ -758,15 +754,14 @@ input[type="number"] {
   #contactList {
     left: 24.2%;
   }
-  
 }
 
 @media (max-width: 900px) {
-  #close_2{
+  #close_2 {
     fill: white;
   }
 
-  #create_contact{
+  #create_contact {
     width: 100%;
   }
 
@@ -859,7 +854,6 @@ input[type="number"] {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-end-start-radius: 0px;
-    
   }
 
   .avatar {
@@ -903,7 +897,7 @@ input[type="number"] {
 
   #new_contact_modal {
     flex-direction: column;
-    
+
     left: 0;
     box-shadow: unset;
     top: unset;
@@ -914,10 +908,8 @@ input[type="number"] {
     font-size: 32px;
   }
 
-  #edit_form{
-
-  width: 100%;
-  
+  #edit_form {
+    width: 100%;
   }
 
   @media (max-width: 600px) {
@@ -979,14 +971,12 @@ input[type="number"] {
       height: 82.5vh;
     }
 
-    .contact_info_container{
+    .contact_info_container {
       margin-top: 81px;
     }
   }
 
   @media (max-width: 400px) {
-    
-
     .avatar {
       top: 35vh;
       height: 80px;
@@ -999,7 +989,7 @@ input[type="number"] {
     }
 
     #contactList {
-      height: 80.5vh;
+      height: 75.5vh;
       top: 82px;
     }
 
@@ -1023,10 +1013,10 @@ input[type="number"] {
       margin-top: unset;
     }
 
-    #contactList{
+    #contactList {
       height: 75.5vh;
     }
-    .contact_info_container{
+    .contact_info_container {
       margin-top: 81px;
     }
   }
