@@ -55,8 +55,9 @@ function openModal(id) {
   let parentElement = modal.parentNode;
   modal.style = "display: flex;";
   modal.className = "slideIn";
-  parentElement.style = "position: absolute; display: flex; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 99;"
-  parentElement.addEventListener("click", function() {
+  parentElement.style =
+    "position: absolute; display: flex; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 99;";
+  parentElement.addEventListener("click", function () {
     closeModal(id);
   });
 }
@@ -276,7 +277,6 @@ function capitalizeName(modal) {
     document.getElementById(modal).value = fullName;
   }
 }
-
 
 /**
  *
