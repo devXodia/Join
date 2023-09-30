@@ -56,9 +56,11 @@ function openModal(id) {
   modal.style = "display: flex;";
   modal.className = "slideIn";
   parentElement.style =
-    "position: absolute; display: flex; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 99;";
-  parentElement.addEventListener("click", function () {
-    closeModal(id);
+    "position: absolute; display: flex; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 10;";
+  parentElement.addEventListener("click", function (event) {
+    if (event.target === parentElement) {
+      closeModal(id);
+    }
   });
 }
 
