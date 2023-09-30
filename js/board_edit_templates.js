@@ -45,10 +45,7 @@ function editModeTemplate(id, task) {
     <form id="editTaskContainer" onsubmit="saveEditedBoard(${id}); return false;">
         <div id="editTaskContainerClose" onclick="closeEditTask()"><img src="assets/img/Icon_close.png" alt="">
         </div>
-        <button id="editTaskContainerSave" type="submit">
-            <div id="editTaskContainerSaveText">Ok</div>
-            <div id="editTaskContainerSaveIcon"><img src="assets/img/done-30.png"></div>
-        </button>
+        
         <div id="editTaskContainerInner" class="editContainerInner" onclick="closeOptionsOnClick(event, 'Edit')">
             <div id="editTaskTitle" class="editTaskTitleFixed editTasksWidth80">
                 <div id="editTaskTitleFixed">Title</div>
@@ -89,6 +86,12 @@ function editModeTemplate(id, task) {
                 <div id="editContactAlert" class="alert"></div>
                 <div id="editTaskAssignedChangable"></div>
             </div>
+            <div class="save-btn">
+            <button id="editTaskContainerSave" type="submit">
+            <div id="editTaskContainerSaveText">Ok</div>
+            <div id="editTaskContainerSaveIcon"><img src="assets/img/done-30.png"></div>
+        </button>
+        </div>
         </div>
 </form>
 `;

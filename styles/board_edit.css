@@ -78,7 +78,7 @@
 }
 
 #editTaskContainer {
-  height: 798px;
+  height: 855px;
   max-height: 90%;
   width: 623px;
   background-color: white;
@@ -200,7 +200,6 @@
   font-size: 20px;
   margin-top: -30px;
   width: 380px;
-  min-height: 200px;
 }
 
 #editTaskContainerSubtasksText {
@@ -213,7 +212,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  min-height: 150px;
+
   overflow: scroll;
   position: relative;
 }
@@ -283,8 +282,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  cursor: pointer;
-  /* padding-bottom: 15px; */
+
+  padding-bottom: 15px;
 }
 
 #editTaskContainerDelete {
@@ -296,6 +295,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #editTaskContainerEdit {
@@ -308,15 +308,14 @@
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #editTaskContainerSave {
-  position: absolute;
-  bottom: 40px;
-  right: 50px;
   width: 100px;
-  height: 50px;
+  padding: 10px;
   display: flex;
+  align-self: flex-end;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -327,6 +326,14 @@
   background-color: #2a3647;
   color: white;
   gap: 4px;
+  margin-bottom: 16px;
+}
+
+.save-btn {
+  display: flex;
+  width: 100%;
+
+  justify-content: flex-end;
 }
 
 #editTaskContainerSaveIcon {
