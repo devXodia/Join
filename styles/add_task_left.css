@@ -32,11 +32,10 @@ button {
   flex-direction: column;
   background-color: white;
   overflow-y: scroll;
-  height: 14vh;
-  
+  height: 11vh;
 }
 
-.holdingIconsList{
+.holdingIconsList {
   margin-left: 10px;
   display: flex;
 }
@@ -132,7 +131,7 @@ textarea:focus-visible {
   font-family: "inter" !important;
 }
 
-.inputWithList:hover{
+.inputWithList:hover {
   cursor: pointer;
 }
 
@@ -342,7 +341,7 @@ textarea:focus-visible {
   justify-content: center;
 }
 
-#newContactAdd{
+#newContactAdd {
   flex: 1;
 }
 
@@ -350,15 +349,15 @@ textarea:focus-visible {
   filter: brightness(1) invert(1);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A3647; 
+  background: #2a3647;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {    
-  background: #29ABE2; 
+::-webkit-scrollbar-thumb:hover {
+  background: #29abe2;
 }
