@@ -59,7 +59,7 @@ function renderEditOverviewTemplate(colorCode, prio, id) {
 
   window.onclick = function (event) {
     if (event.target != container && event.target == task) {
-      closeEditTask();
+      saveBoard(id);
     }
   };
   disableBackgroundScroll();
@@ -169,8 +169,8 @@ function renderSubtasksWithHook(index, id) {
   document.getElementById(
     "editTaskContainerSubtasksTasks"
   ).innerHTML += /*html*/ `
-            <div class="subtaskInOverview">
-                <div id="checkBoxEdit${id}${index}" class="checkBox hover" onclick="addCheck(${index},${id},'Edit')"><img src="assets/img/done-30.png"></div>
+            <div class="subtaskInOverview" onclick="addCheck(${index},${id},'Edit')">
+                <div id="checkBoxEdit${id}${index}" class="checkBox hover" ><img src="assets/img/done-30.png"></div>
                 <div style="flex:1;">${subTasksArray[index].subTaskName}</div>
             </div>
         `;

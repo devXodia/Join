@@ -222,6 +222,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
+  cursor: pointer;
 }
 
 .subtaskEdit {
